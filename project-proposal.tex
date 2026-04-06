@@ -1,0 +1,139 @@
+\documentclass[11pt, letterpaper]{article}
+
+\topmargin 0in \textheight 9in \textwidth 6.7in \evensidemargin -.21in \oddsidemargin -.21in \columnsep 0.3in
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{natbib}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    urlcolor=blue!70!black,
+    citecolor=blue!70!black
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\begin{document}
+
+\pagestyle{empty}
+
+~\vskip1em
+{\Large
+\noindent \textbf{ECE 657D: Research Project} \\[4pt]
+}
+{\large
+% ===== INSTRUCTIONS =====
+% Replace "Your Project Title" with your actual project title.
+% Replace "Your Name" and "Your Student ID" below.
+\noindent \textbf{Your Project Title Here} \\[4pt]
+\noindent Your Name \quad | \quad Your Student ID \\[4pt]
+\noindent University of Waterloo \quad | \quad Winter 2026
+}
+
+\vskip 1em
+\hrule
+\vskip 1em
+
+% ===== INSTRUCTIONS =====
+% This template follows the adapted Heilmeier Catechism from the project handout.
+% Each section corresponds to one of the eight evaluation questions.
+%
+% FOR THE PROPOSAL (due Feb 27):
+%   - Target length: 2 pages (excluding references)
+%   - Some sections may be preliminary; that is expected.
+%
+% FOR THE FINAL SUBMISSION (due Apr 2):
+%   - Target length: 4 pages (excluding references)
+%   - All sections should be complete, with results and analysis.
+%   - Add a "Results" section after Q8 to present your findings.
+%
+% Delete all instructional comments before submitting.
+
+\section*{Q1: Research Question}
+% What is your research question? State it in plain language.
+% A reader with no background in your specific topic should understand
+% what you are investigating.
+
+[Your research question here. For example: ``Can a lightweight vision transformer match the performance of a ResNet-50 on medical image classification when trained with limited labeled data?'']
+
+\section*{Q2: Prior Work and Limitations}
+% Summarize the most relevant existing approaches. What has been tried?
+% What are the key limitations that motivate your work? Cite specific papers.
+
+[Describe 3--5 relevant prior works and their limitations. For example: \citet{he2016deep} introduced residual connections that enabled training of very deep networks, but their approach requires large labeled datasets. \citet{dosovitskiy2021image} showed that transformers can achieve competitive results on image classification, but require extensive pre-training data.]
+
+\section*{Q3: Novelty of Approach}
+% What is new or different about your method?
+% This could be a novel combination of techniques, an application to a new domain,
+% or a systematic comparison that has not been done before.
+
+[Describe what is novel about your approach here.]
+
+\section*{Q4: Impact and Motivation}
+% Who would benefit from your results? Why should we care?
+% Connect your work to broader goals in deep learning or its applications.
+
+[Explain why this matters and who would benefit.]
+
+\section*{Q5: Risks and Assumptions}
+% What are the main risks? What could go wrong?
+% What assumptions about data, compute, or method might not hold?
+
+[Identify key risks and assumptions here.]
+
+\section*{Q6: Resources}
+% What compute and data resources do you need?
+% What datasets will you use? Where will you get compute?
+
+[Describe your resource plan. For example: ``I will use the CIFAR-10 dataset \citep{krizhevsky2009learning} and train on Google Colab free tier (T4 GPU). Training is estimated to take approximately 4 hours per experiment.'']
+
+\section*{Q7: Weekly Plan}
+% Provide a week-by-week plan for the ~5 weeks between proposal and final submission.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{cl}
+\toprule
+\textbf{Week} & \textbf{Plan} \\
+\midrule
+1 (Mar 3--7) & [e.g., Finalize dataset, implement baseline model] \\
+2 (Mar 10--14) & [e.g., Implement proposed method] \\
+3 (Mar 17--21) & [e.g., Run experiments, tune hyperparameters] \\
+4 (Mar 24--28) & [e.g., Additional experiments, ablation studies] \\
+5 (Mar 31--Apr 2) & [e.g., Write up results, finalize submission] \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{Q8: Milestones and Success Criteria}
+% How will you measure success? What baselines will you compare against?
+% Define quantitative and/or qualitative metrics.
+
+[Define your success criteria here. For example: ``Success is measured by test accuracy on CIFAR-10. The baseline is a ResNet-18 trained from scratch. I will consider the project successful if the proposed method achieves within 2\% of the baseline accuracy with 50\% fewer parameters.'']
+
+% ===== FOR THE FINAL SUBMISSION ONLY =====
+% Uncomment and fill in the sections below for your final write-up.
+
+% \section*{Results}
+% [Present your experimental results here. Include tables and/or figures.]
+
+% \section*{Discussion}
+% [Discuss your results. What worked? What didn't? What did you learn?]
+
+% \section*{Acknowledgments}
+% [Acknowledge any AI tools used, discussions with classmates, etc.]
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}

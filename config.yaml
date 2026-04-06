@@ -1,0 +1,53 @@
+# Hyperparameters
+batch_size: 128
+epochs: 30
+learning_rate: 0.1
+momentum: 0.9
+weight_decay: 0.0001
+temperature: 4.0
+alpha: 0.7
+seed: 42
+soft_target_loss_weight: 0.25
+# A weight assigned to the extra objective we’re about to include.
+ce_loss_weight: 0.75
+# A weight assigned to cross-entropy. Tuning these weights pushes the network towards optimizing for either objective.
+
+# Data
+dataset: cifar10
+num_classes: 10
+
+# Training
+mixed_precision: true
+save_checkpoints: true
+
+# Experiments (teacher-student pairs)
+experiments:
+  - id: same_18
+    teacher_depth: 18
+    student_depth: 18
+    description: "ResNet18 → ResNet18 (same-size baseline)"
+    
+  - id: same_34
+    teacher_depth: 34
+    student_depth: 34
+    description: "ResNet34 → ResNet34 (same-size baseline)"
+    
+  - id: small_34_18
+    teacher_depth: 34
+    student_depth: 18
+    description: "ResNet34 → ResNet18 (small gap)"
+    
+  - id: medium_50_18
+    teacher_depth: 50
+    student_depth: 18
+    description: "ResNet50 → ResNet18 (medium gap)"
+    
+  - id: large_101_18
+    teacher_depth: 101
+    student_depth: 18
+    description: "ResNet101 → ResNet18 (large gap)"
+    
+  - id: xlarge_152_18
+    teacher_depth: 152
+    student_depth: 18
+    description: "ResNet152 → ResNet18 (x-large gap)"
